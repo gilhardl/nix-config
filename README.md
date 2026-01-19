@@ -23,7 +23,7 @@ nix-shell -p git --run "git clone https://github.com/gilhardl/nix-config.git ~/n
 3. Install Nix flake
 
 ```sh
-nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --flake ~/nix#mbp
+sudo nix run nix-darwin --extra-experimental-features 'nix-command flakes' -- switch --flake ~/nix#mbp
 ```
 
 ## Upgrade packages
@@ -37,7 +37,7 @@ cd ~/nix && nix flake update
 2. Rebuild system
 
 ```sh
-darwin-rebuild switch --flake ~/nix#mbp
+sudo darwin-rebuild switch --flake ~/nix#mbp
 ```
 
 ## Customize configuration
@@ -47,5 +47,5 @@ darwin-rebuild switch --flake ~/nix#mbp
 2. Rebuild system
 
 ```sh
-darwin-rebuild switch --flake ~/nix#mbp
+sudo darwin-rebuild switch --flake ~/nix#mbp
 ```
